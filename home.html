@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>C++學習網站</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<style>
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+</style>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>C++<br>學習網</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#intro" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">介紹</a> 
+    <a href="#purpose" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">用途</a> 
+    <a href="#lesson" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">課程</a> 
+    <a href="#posttest" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">課後練習</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Company Name</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="intro">
+    <h1 class="w3-jumbo"><b>C++</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>介紹.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <p style="font-size:145%;">1980 年代 Bjarne Stroustrup 於貝爾實驗室發明 C++ ，目的是將將 C 語言實現物件導向的程式語言，早期被稱為 C with Classes 的語言，後來不斷的增加新特性，時至今日， C++ 已經是功能強大而且複雜的程式語言。</p>
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="purpose" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>用途.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p style="font-size:160%;">1. 軟體開發</p>
+    <p style="font-size:120%;">作業系統可以分為兩塊：內核以及內核以外的一些應用程式。內核用於控制最底層的硬體設備，而應用程式則是用於完成一系列的任務。應用程式是通過調用系統提供的接口（如windows API）操作硬體來實現一系列的功能。
+	  要想從事應用軟體開發，除了需要掌握基本的C++語法以外，還需要對windows系統及其他系統提供的API或SDK有一定的了解。與之相對應的崗位主要有<mark>軟體開發工程師、算法工程師、架構工程師</mark>等。
+	</p>
+	<img src="software develop.jpg" alt="software develop" width="320" height="320">
+	
+	<p style="font-size:160%;">2. 遊戲開發</p>
+	<p style="font-size:120%;">掌握了C++基本語法之後，開發遊戲也依然是一個不錯的選擇，目前工業級別的3D遊戲引擎仍然是用C或C++編寫的。
+	雖然以個人能力無法去完成一個龐大的網路遊戲，但是從簡單開始，編寫一些小遊戲，然後逐漸深入，循序漸進並最終加入大型遊戲開發團隊還是非常好的一個選擇。與之相應的就業崗位主要有<mark>遊戲開發工程師、遊戲引擎架構工程師</mark>等。
+	</p>
+	<img src="game.jpg" alt="game" width="320" height="214">
+	
+	<p style="font-size:160%;">3. 多媒體開發</p>
+	<p style="font-size:120%;">目前多媒體技術同樣滲入到人們的日常生活中，音視頻已經成為人們獲取信息的一個非常重要的手段。音視頻在傳輸過程中都是經過壓縮並且按照一定規則打包過的。視頻的編碼技術從最開始的H.261到如今的H.265，經歷了30多年的發展，而且實現代碼全部是由C或C++實現。
+	與之相應的就業崗位有<mark>圖像算法工程師、視頻編碼研發工程師、音視頻轉碼工程師</mark>等。
+	</p>
+	<img src="media.jpg" alt="media" width="320" height="393">
+	
+	<p style="font-size:160%;">4. 人工智慧</p>
+	<p style="font-size:120%;">人工智慧、機器學習等方向也少不了C或C++語言的身影。雖然人工智慧距離我們還有些遠，但隨著科技的飛速進步，將來能實現也未可知。</p>
+	<img src="ai.jpg" alt="ai" width="320" height="180">
+  </div>
+  
+  <!-- Designers -->
+  <div class="w3-container" id="lesson" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>課程.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>讓我們從0開始吧</p>
+    <p>你可以學到：</p>
+	<p>1. 掌握C++的語法</p>
+	<p>2. 判斷式用法</p>
+	<p>3. 迴圈應用</p>
+    <p><b>選擇課程</b>：</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="C++.jpg" alt="C++" style="width:100%">
+        <div class="w3-container">
+          <h3>C++環境介紹和變數運算</h3>
+          <p>介紹C++的建置架構和輸入輸出</p>
+		  <div class="w3-container w3-center">
+			<div class="w3-bar">
+				<button class="w3-button w3-green w3-padding-large w3-hover-aqua w3-round-xlarge" onClick="location.href='file:///C:/Users/eric/Desktop/%E6%95%B8%E4%BD%8D%E5%AD%B8%E7%BF%92/lesson1.html'">Learn</button>
+			</div>
+		  </div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="ifelse.jpg" alt="if else" style="width:100%">
+        <div class="w3-container">
+          <h3>if elseif else 判斷式</h3>
+          <p>介紹if-else的判斷用法</p>
+		  <div class="w3-container w3-center">
+			<div class="w3-bar">
+				<button class="w3-button w3-green w3-padding-large w3-hover-aqua w3-round-xlarge" onClick="location.href='lesson2.html'">Learn</button>
+			</div>
+		  </div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="for.jpg" alt="for" style="width:100%">
+        <div class="w3-container">
+          <h3>迴圈</h3>
+          <p>介紹for迴圈，while迴圈的用法</p>
+		  <div class="w3-container w3-center">
+			<div class="w3-bar">
+				<button class="w3-button w3-green w3-padding-large w3-hover-aqua w3-round-xlarge" onClick="location.href='file:///C:/Users/eric/Desktop/%E6%95%B8%E4%BD%8D%E5%AD%B8%E7%BF%92/lesson3.html'">Learn</button>
+			</div>
+		  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Contact -->
+  <div class="w3-container" id="posttest" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>課後練習</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>上完課程來做一些練習吧</p>
+	<button class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onClick="location.href='file:///C:/Users/eric/Desktop/%E6%95%B8%E4%BD%8D%E5%AD%B8%E7%BF%92/test.html'">Start</button>
+      
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>

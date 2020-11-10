@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<title>課後測驗</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif; background-color: #F0FFF0}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+
+hr.new1 {
+	border: 1px solid slateGrey;
+}
+
+hr.new2 {
+	border-top: 1px solid slateGrey;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: deepSkyBlue;
+  width: 50%;
+  color: black; 
+  border-radius: 8px;
+}
+
+.button1:hover {
+  background-color: DarkTurquoise;
+  color: white;
+}
+</style>
+
+<script> 
+	function displayResult()
+	{
+		var radios1 = document.getElementsByName('choice1');
+		var radios2 = document.getElementsByName('choice2');
+		var radios3 = document.getElementsByName('choice3');
+		var radios4 = document.getElementsByName('choice4');
+		var radios5 = document.getElementsByName('choice5');
+		var answer = ["C", "C", "B", "A", "C"];
+		var one, two, three, four, five;
+		for(var i = 0, length = radios1.length; i < length; i++)
+		{
+			if(radios1[i].checked)
+			{
+
+				if(radios1[i].value == answer[0])
+				{
+					one = "1. 正確";
+				}
+				else
+				{
+					one = "1. 卻誤，答案是 C ，可以再次複習第一章";
+				}
+			}
+		}
+		
+		for(var i = 0, length = radios2.length; i < length; i++)
+		{
+			if(radios2[i].checked)
+			{
+
+				if(radios2[i].value == answer[1])
+				{
+					two = "2. 正確";
+				}
+				else
+				{
+					two = "2. 卻誤，答案是 C ，可以再次複習第二章";
+				}
+			}
+		}
+		
+		for(var i = 0, length = radios3.length; i < length; i++)
+		{
+			if(radios3[i].checked)
+			{
+				if(radios3[i].value == answer[2])
+				{
+					three = "3. 正確";
+				}
+				else
+				{
+					three = "3. 卻誤，答案是 B ，可以再次複習第三章";
+					
+				}
+			}
+		}
+		
+		for(var i = 0, length = radios4.length; i < length; i++)
+		{
+			if(radios4[i].checked)
+			{
+				if(radios4[i].value == answer[3])
+				{
+					four = "4. 正確";
+				}
+				else
+				{
+					four = "4. 卻誤，答案是 A ，可以再次複習第一、二章";
+				}
+			}
+		}
+		
+		for(var i = 0, length = radios5.length; i < length; i++)
+		{
+			if(radios5[i].checked)
+			{
+				if(radios5[i].value == answer[4])
+				{
+					five = "5. 正確";
+				}
+				else
+				{
+					five = "5. 卻誤，答案是 C ，可以再次複習第二、三章";
+				}
+			}
+		}
+		var re = one + "\r" + two + "\r" + three + "\r" + four + "\r" + five;
+		alert(re);
+		
+	}
+</script>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="home.html" class="w3-bar-item w3-button">Home</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="test.jpg" alt="test" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+
+  </div>
+</header>
+	<hr class="new1">
+<!-- Page content -->
+<form>
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- question1 Section -->
+  <div class="w3-row w3-padding-64" id="about">  
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Question 1</h1><br>
+      <p class="w3-xlarge">當此程式執行時，出現<span class="w3-tag w3-light-grey">請輸入一段文字：</span>，接著輸入&nbsp; Hello World&nbsp; 按enter後，請問下列哪個執行結果是正確的？</p>
+	  <input type="radio" name="choice1" value="A">&nbsp;<img src="testpic\ans1_1.jpg" alt="ans1_1" width="229" height="120">&nbsp;
+	  <input type="radio" name="choice1" value="B">&nbsp;<img src="testpic\ans1_2.jpg" alt="ans1_2" width="229" height="120"><br><br><br>
+	  <input type="radio" name="choice1" value="C">&nbsp;<img src="testpic\ans1_3.jpg" alt="ans1_3" width="229" height="120">&nbsp;
+	  <input type="radio" name="choice1" value="D">&nbsp;<img src="testpic\ans1_4.jpg" alt="ans1_4" width="229" height="120"><br>
+    </div>
+	
+	 <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="testpic\question1.jpg" class="w3-round w3-image" alt="Table Setting" width="600" height="750">
+    </div>
+  </div>
+  
+  <hr class="new2">
+  
+  <!-- question2 Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Question 2</h1><br>
+      <p class="w3-xlarge">當 a, b, c 分別輸入數字為 4, 13, 7時，下列哪個執行結果是正確的？</p>
+	  <input type="radio" name="choice2" value="A">&nbsp;<img src="testpic\ans2_1.jpg" alt="ans1_1" width="229" height="120">&nbsp;
+	  <input type="radio" name="choice2" value="B">&nbsp;<img src="testpic\ans2_2.jpg" alt="ans1_2" width="229" height="120"><br><br><br>
+	  <input type="radio" name="choice2" value="C">&nbsp;<img src="testpic\ans2_3.jpg" alt="ans1_3" width="229" height="120">&nbsp;
+	  <input type="radio" name="choice2" value="D">&nbsp;<img src="testpic\ans2_4.jpg" alt="ans1_4" width="229" height="120"><br>
+    </div>
+	
+	 <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="testpic\question2.jpg" class="w3-round w3-image" alt="Table Setting" width="600" height="750">
+    </div>
+  </div>
+
+  <hr class="new2">
+
+  <!-- question3 Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Question 3</h1><br>
+      <p class="w3-xlarge">下列哪一個是程式執行時輸出的數字？</p>
+	  <input type="radio" name="choice3" value="A">&nbsp;2777&nbsp;
+	  <input type="radio" name="choice3" value="B">&nbsp;2727<br><br><br>
+	  <input type="radio" name="choice3" value="C">&nbsp;7227&nbsp;
+	  <input type="radio" name="choice3" value="D">&nbsp;7727<br>
+    </div>
+	
+	 <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="testpic\question3.jpg" class="w3-round w3-image" alt="Table Setting" width="600" height="750">
+    </div>
+  </div>
+
+  <hr class="new2">
+
+  <!-- question4 Section -->
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Question 4</h1><br>
+      <P>有三個邊的長度分別為 a, b, c, 要組成三角形，下列哪一個程式碼可以正確判斷是否能組成一個三角形？</p>
+	  <img src="testpic\triangle.jpg" class="w3-round w3-image" alt="triangle" style="width: 100%">
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+      <input type="radio" name="choice4" value="A">&nbsp;<img src="testpic\ans4_1.jpg" alt="ans4_1" style="width: 75%"><br><br>
+      <input type="radio" name="choice4" value="B">&nbsp;<img src="testpic\ans4_2.jpg" alt="ans4_2" style="width: 75%"><br><br>
+	  <input type="radio" name="choice4" value="C">&nbsp;<img src="testpic\ans4_3.jpg" alt="ans4_3" style="width: 75%"><br><br>
+      <input type="radio" name="choice4" value="D">&nbsp;<img src="testpic\ans4_4.jpg" alt="ans4_4" style="width: 75%"><br><br>
+    </div>
+  </div>
+
+  <hr class="new2">
+
+  <!-- question5 Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">Question 5</h1><br>
+      <p class="w3-xlarge">下列哪一個程式執行輸出的結果與其他兩個不一樣？</p>
+	  
+    </div>
+	
+	 <div class="w3-col m6 w3-padding-large w3-hide-small">
+	  <input type="radio" name="choice5" value="A">&nbsp;<img src="testpic\ans5_1.jpg" alt="ans5_1" style="wisth:75%"><br><br>
+	  <input type="radio" name="choice5" value="B">&nbsp;<img src="testpic\ans5_2.jpg" alt="ans5_2" style="wisth:75%"><br><br>
+	  <input type="radio" name="choice5" value="C">&nbsp;<img src="testpic\ans5_3.jpg" alt="ans5_3" style="wisth:75%"><br><br>
+    </div>
+  </div>
+
+  <hr class="new2">
+  
+  <!-- submit Section -->
+	<div align="center"><button class="button button1" onClick="displayResult()">提交</button>
+	<br><br>
+<!-- End page content -->
+</div>
+</form>
+
+
+
+</body>
+</html>

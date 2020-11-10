@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Lesson1-2</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="home.html" class="w3-bar-item w3-button w3-theme-l1"><i class="fa fa-home"></i></a>
+    <a href="home.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white" style="width:8%">Home</a>
+
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Lesson1 認識C++</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="lesson1.html">1-1 基礎框架</a>
+  <a class="w3-bar-item w3-button w3-hover-black w3-black" href="lesson1-2.html">1-2 變數宣告</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="lesson1-3.html">1-3 輸入輸出</a>
+    <a class="w3-bar-item w3-button w3-hover-black" href="lesson1-3.html">1-4 變數運算</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">1-2變數宣告</h1>
+		<div class="w3-panel w3-card w3-light-grey">
+		<h3>Example</h3>
+		<div class="w3-code jsHigh notranslate">
+		#include &lt;iostream&gt;<br>#include &lt;string&gt;<br>using namespace std;<br><br>int main() {<br>&nbsp; int a = 1;<br>&nbsp; float b = 2.33;<br>&nbsp; char c = 'h';<br>&nbsp; string d = "aaa";<br>&nbsp; bool e = true;<br>&nbsp; return 0;<br>}</div>
+		</div>
+		
+		<p>第一個變數為<code class="w3-codespan">int</code>，這種變數型態叫做「整數」，可以存入整數，負數也可以。宣告方式如像上面Example的變數&ensp;a&ensp;其值為整數1。</p>
+		<p>第二個變數為<code class="w3-codespan">float</code>，這種變數型態叫做「浮點數」，可以存入有小數點的數字。宣告方式如像上面Example的變數&ensp;b&ensp;其值為2.33。</p>
+		<p>第三個變數為<code class="w3-codespan">char</code>，這種變數型態叫做「字元」，也就是文字，可以是英文、中文、數字...等等。字元的左右需要用單引號<code class="w3-codespan">'</code>包起來，宣告方式如像上面Example的變數&ensp;c&ensp;所示，其值為h。</p>
+		<p>第四個變數為<code class="w3-codespan">string</code>，這種變數型態叫做「字串」，也就是一串文字，可以是英文、中文、數字...等等。字元的左右需要用雙引號<code class="w3-codespan">&quot;</code>包起來，在宣告前需要加上標頭檔<code class="w3-codespan">#include &lt;string&gt;</code>
+		，宣告方式如像上面Example的變數&ensp;d&ensp;所示，其值為aaa。</p>
+		<p>第五個變數為<code class="w3-codespan">bool</code>，這種變數型態叫做「布林變數」，其布林值只有兩種可能，<font color="blue">true</font>和<font color="blue">false</font>。<font color="blue">true</font>表示邏輯上的「真」，<font color="blue">false</font>表示邏輯上的「假」。
+		宣告方式如像上面Example的變數&ensp;e&ensp;所示，其值為<font color="blue">true</font>。布林值也可以用1和0表示，1為<font color="blue">true</font>，0為<font color="blue">false</font></p>
+		
+    </div>
+  </div>
+  
+  
+
+<!-- END MAIN -->
+</div>
+
+<script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+<script>
+	w3CodeColor();
+</script>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

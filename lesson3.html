@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Lesson3</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="home.html" class="w3-bar-item w3-button w3-theme-l1"><i class="fa fa-home"></i></a>
+    <a href="home.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white" style="width:8%">Home</a>
+
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Lesson3 迴圈</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black w3-black" href="lesson3.html">3-1 for</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="lesson3-2.html">3-2 while</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="lesson3-3.html">3-3 do-while</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="lesson3-4.html">3-4 雙層迴圈</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">3-1 for迴圈</h1>
+		<div class="w3-panel w3-card w3-light-grey">
+		<h3>for 迴圈</h3>
+			<div class="w3-code jsHigh notranslate">
+			for(變數型態 變數名稱 = 值; 執行條件; 控制程式碼){<br>
+			內容程式碼<br>}
+			</div>
+			<p>兩個小括號()內可分為三個部分：</p>
+			<p>第一部分是<font color="blue">變數型態 變數名稱 = 值</font>。這是迴圈的初始設定，在for迴圈剛開始時就會執行，且只執行一次。</p>
+			<p>第二部分是<font color="blue">執行條件</font>，是迴圈執行的條件，每一次迴圈內的內容程式碼要被執行前，這個<font color="blue">執行條件</font>就會被檢查一次，若條件成立則繼續執行<font color="blue">內容程式碼</font>，若不成立則結束迴圈。</p>
+			<p>第三部分是<font color="blue">控制程式碼</font>，用來控制迴圈執行的次數。每一次迴圈內的<font color="blue">內容程式碼</font>被執行完後，<font color="blue">控制程式碼</font>就會被執行一次。</p>
+		</div>
+		<br>
+		
+		<div class="w3-panel w3-card w3-light-grey">
+		<h3>Example</h3>
+			<div class="w3-code jsHigh notranslate">
+				for(int i = 0; i &lt; 10; i++){<br>
+				&nbsp; cout &lt;&lt; i &lt;&lt; &quot; &quot;;<br>}
+			</div>
+			<p>程式執行流程為：<br>宣告一個整數型態的變數 i 初始值為 0，<font color="red"> i 值為 0 小於 10 </font>此條件成立，執行內容程式碼。所以輸出 i 的值 0 ，並且空一格。最後<code class="w3-codespan">i++</code>讓 i 的值 +1，所以 i 的值變為 1，結束第一次迴圈。</p>
+			<p>第二次迴圈開始， i 的值為 1 ，<font color="red"> i 值為 1 小於 10 </font>此條件成立，執行內容程式碼。所以輸出 i 的值 1，並且空一格。最後<code class="w3-codespan">i++</code>讓 i 的值 +1，所以 i 的值變為 2，結束第二次迴圈。</p>
+			<p>第三次迴圈開始， i 的值為 2 ，<font color="red"> i 值為 2 小於 10 </font>此條件成立，執行內容程式碼。所以輸出 i 的值 2，並且空一格。最後<code class="w3-codespan">i++</code>讓 i 的值 +1，所以 i 的值變為 3，結束第三次迴圈。</p>
+			<p class="w3-center">&bull;</p>
+			<p class="w3-center">&bull;</p>
+			<p class="w3-center">&bull;</p>
+			<p>第十次迴圈開始， i 的值為 9 ，<font color="red"> i 值為 9 小於 10 </font>此條件成立，執行內容程式碼。所以輸出 i 的值 9，並且空一格。最後<code class="w3-codespan">i++</code>讓 i 的值+1，所以 i 的值變為 10，結束第十次迴圈。</p>
+			<p>第十一次迴圈開始， i 的值為 10 ，<font color="red"> i 值為 10 小於 10 </font>此條件不成立，因此跳出迴圈。</p>
+		</div>
+		<p>下圖為執行結果：</p>
+		<img src="for_code.jpg" alt="for code" style="width:25%">
+		
+    </div>
+  </div>
+  
+  
+
+<!-- END MAIN -->
+</div>
+
+<script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+<script>
+	w3CodeColor();
+</script>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
